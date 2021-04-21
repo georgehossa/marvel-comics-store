@@ -17,9 +17,9 @@ We invite you to carefully read the next description because it contains the ste
   
 ## Usage
 
-```
+  ```
     npm run dev
-```
+  ```
 
   
 ## 😎 The Challenge
