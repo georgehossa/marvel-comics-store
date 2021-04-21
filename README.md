@@ -3,6 +3,11 @@
 Welcome to the Ayenda Frontend test. We're so glad to have you here and we are ready to see what you're able to do. 
 We invite you to carefully read the next description because it contains the steps and minimun requirements we expect from you.
 
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [😎 The Challenge](#-the-challenge)
+  * [👀 Keep in mind](#-keep-in-mind)
+  * [🔚 When you finish 🎉](#-when-you-finish-)
 
 ## Installation
 
