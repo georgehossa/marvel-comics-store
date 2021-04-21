@@ -26,7 +26,7 @@ We invite you to carefully read the next description because it contains the ste
 You will have to build a comic's store using the [Marvel's API](https://developer.marvel.com/docs) taking in count the following points:
   - **UI**: The Comic's store could look like this.(Use it as a guide, but feel free to add any feature you want):
 
-	[ImageURL]
+	![Ui Guide](./ui-guide.png)
     
   - **Show a List of comics**: List the comics that the API returns when you request to the `/v1/public/comics` endpoint.
   - **Include a search field**: When the user type this input field, you should update the comics list based on the user entry
