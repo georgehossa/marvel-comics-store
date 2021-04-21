@@ -24,18 +24,22 @@ We invite you to carefully read the next description because it contains the ste
   
 ## 😎 The Challenge
 You will have to build a comic's store using the [Marvel's API](https://developer.marvel.com/docs) taking in count the following points:
-  - **UI**: The Comic's store could look like this.(Use it as a guide, but feel free to add any feature you want):
+  - **UI**: The Comic's store could look like this.(Use it as a guide, but if you have better UI ideas, feel free to include those ones in your solution):
 
 	![Ui Guide](./ui-guide.png)
     
   - **Show a List of comics**: List the comics that the API returns when you request to the `/v1/public/comics` endpoint.
-  - **Include a search field**: When the user type this input field, you should update the comics list based on the user entry
+  - **Include a search field**: When the user type this input field, you should update the comics list based on the user entry.
   - **Filters**: Include a characters filter. When user click on it, the comics list only will show the comics where this character appears. Feel free to include any other filter
+  - **Responsive**: Your solution should be responsive at least for desktop and mobile devices.
 
 ## 👀 Keep in mind
     
 - As we already mentioned, we give you a boilerplate in order to make you the inital setup a little bit easer but feel free to edit or modify what ever you need.
 - Feel free to include any approach or tecnology you want
+- Pss pss, you could have extra points if you include unit testing in your solution 
 
 ## 🔚 When you finish 🎉
-- Please make a pull request with your solution
+
+- Share a production link of your solution. (You could use whatever you want for this step).
+- Please make a pull request with your solution and include your production link in the PR description
