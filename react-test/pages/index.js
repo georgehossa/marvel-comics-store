@@ -1,4 +1,6 @@
-const comics = [
+import {Component} from "react";
+
+const comicsData = [
   {
     title: "Uncanny X-Men (1963) #452",
     description: "CHASING HELLFIRE\" PART 1 (OF 3)\r\nWhile on assignment to track down missing teammate Sage, the X-Men discover more than they bargained for-the birth of a newer and deadlier Hellfire Club.",
@@ -52,18 +54,41 @@ const comics = [
   }
 ]
 
-export default function Home() {
-  return (
-    <div>
-      <h1>Comics</h1>
-      <pre>{JSON.stringify(comics, null, 2)}</pre>
-      <ul>
-        <li>
-          <img style={{height: '100px', width: '100px'}} src={comics[0].images[0].path + '/detail.' + comics[0].images[0].extension} />
-          <img style={{height: '100px', width: '100px'}} src={comics[1].images[0].path + '/detail.' + comics[1].images[0].extension} />
-          <img style={{height: '100px', width: '100px'}} src={comics[2].images[0].path + '/detail.' + comics[2].images[0].extension} />
-        </li>
-      </ul>
-    </div>
-  )
+function getComics() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(comicsData);
+    }, 1000)
+  })
+}
+
+export default class Home extends Component {
+  state = {
+    comics: []
+  };
+
+  async componentDidMount() {
+    const responseComics = await getComics();
+    this.setState({ comics: responseComics });
+  }
+
+  render() {
+    const { comics } = this.state;
+    return (
+      <div>
+        <h1>Comics</h1>
+        <ul>
+          <li>
+            {comics.map((item) => (
+              <div>
+                <span>{item.title}</span>
+                <img style={{height: '100px', width: '100px'}} src={item.images[0].path + '/detail.' + item.images[0].extension} />
+              </div>
+            ))}
+          </li>
+        </ul>
+        <pre>{JSON.stringify(comics, null, 2)}</pre>
+      </div>
+    )
+  }
 }
