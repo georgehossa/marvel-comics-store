@@ -30,7 +30,7 @@ You will have to build a comic's store using the [Marvel's API](https://develope
     
   - **Show a List of comics**: List the comics that the API returns when you request to the `/v1/public/comics` endpoint.
   - **Include a search field**: When the user type this input field, you should update the comics list based on the user entry
-  - **Filters**: Include a characters filter. When user click on it, the comics list only will show the comics where this caracter appears. Feel free to include any other filter
+  - **Filters**: Include a characters filter. When user click on it, the comics list only will show the comics where this character appears. Feel free to include any other filter
 
 ## 👀 Keep in mind
     
