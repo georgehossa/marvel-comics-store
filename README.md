@@ -1,6 +1,6 @@
 # Ayenda Frontend Test
 
-Welcome to the Ayenda Front end hiring process. We're so glad to have you here and we are ready to see what you're able to do. 
+Welcome to the Ayenda Frontend test. We're so glad to have you here and we are ready to see what you're able to do. 
 We invite you to carefully read the next description because it contains the steps and minimun requirements we expect from you.
 
 
