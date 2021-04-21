@@ -48,5 +48,5 @@ You will have to build a comic's store using the [Marvel's API](https://develope
 
 ## 🔚 When you finish 🎉
 
-- Share a production link of your solution. (You could use vercel, heroku, netlify or any option you want).
+- Share a production link of your solution. (You could use vercel, heroku, netlify or any other option you want).
 - Please make a pull request with your solution and include your production link in the PR description
