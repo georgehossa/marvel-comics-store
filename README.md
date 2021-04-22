@@ -9,7 +9,7 @@ We invite you to carefully read the next description because it contains the ste
   * [Usage](#usage)
   * [😎 The Challenge](#-the-challenge)
   * [👀 Keep in mind](#-keep-in-mind)
-  * [🔚 When you finish 🎉](#-when-you-finish-)
+  * [🏁 At the end of the test](#-at-the-end-of-the-test)
 
 ## Installation
 
@@ -46,7 +46,7 @@ You will have to build a comic's store using the [Marvel's API](https://develope
 - Feel free to include any approach or tecnology you want
 - Pss pss, you could have extra points if you include unit testing in your solution 
 
-## 🔚 When you finish 🎉
+## 🏁 At the end of the test
 
 - Share a production link of your solution. (You could use vercel, heroku, netlify or any other option you want).
 - Please make a pull request with your solution and include your production link in the PR description
