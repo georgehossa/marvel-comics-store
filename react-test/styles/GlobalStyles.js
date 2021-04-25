@@ -13,6 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: ${({theme}) => theme.fonts.primary};
     font-size: ${({theme}) => theme.fonts.sizes.base}px;
+    background-color: ${({theme}) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.white};
   }
 
   h1,
