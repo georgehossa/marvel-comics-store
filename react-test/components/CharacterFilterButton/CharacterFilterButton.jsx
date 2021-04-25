@@ -6,9 +6,9 @@ const CharacterFilterButton = ({ character }) => {
   const [characterData, setCharacterData] = useState(null);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    const API_KEY = '276903768153e6bb93a7711470e97109';
-    const HASH = 'b377f9b70336abc5319f057b032fb63e';
-    const URL = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}`;
+    const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+    const HASH = process.env.NEXT_PUBLIC_HASH;
+    const URL = `${process.env.NEXT_PUBLIC_URL}/v1/public/characters?ts=${process.env.NEXT_PUBLIC_TS}&apikey=${API_KEY}&hash=${HASH}`;
     const getCharacter = async () => {
       try {
         setLoading(true);
@@ -33,7 +33,7 @@ const CharacterFilterButton = ({ character }) => {
       'Cargando' :
       <ListItem>
         <ImageWrapper>
-          <Image src={`${characterData?.thumbnail?.path}.${characterData?.thumbnail?.extension}`} />
+          <Image src={`${characterData?.thumbnail?.path}.${characterData?.thumbnail?.extension}`} alt={characterData?.name} />
         </ImageWrapper>
         <Name>{characterData?.name}</Name>
       </ListItem>
