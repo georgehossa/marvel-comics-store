@@ -39,7 +39,7 @@ const CharacterFilterButton = ({ character }) => {
       const URL = `${process.env.NEXT_PUBLIC_URL}/v1/public/characters?ts=${process.env.NEXT_PUBLIC_TS}&apikey=${API_KEY}&hash=${HASH}`;
       const getComics = async () => {
         try {
-          const req = await fetch(`${characterComics}?ts=${process.env.NEXT_PUBLIC_TS}&apikey=${API_KEY}&hash=${HASH}`);
+          const req = await fetch(`${characterComics.replace('http://','https://')}?ts=${process.env.NEXT_PUBLIC_TS}&apikey=${API_KEY}&hash=${HASH}`);
           const res = await req.json();
           const result = await res.data.results;
 
