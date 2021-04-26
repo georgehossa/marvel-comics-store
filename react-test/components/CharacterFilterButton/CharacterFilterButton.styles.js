@@ -5,6 +5,7 @@ export const Name = styled.span`
   margin-left: .5rem;
   font-weight: ${({theme}) => theme.fonts.weights.bold};
   font-size: 0.875rem;
+  white-space: nowrap;
 `;
 
 export const Image = styled.img`

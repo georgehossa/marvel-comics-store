@@ -12,7 +12,8 @@ export const theme = {
       h1: 48,
       h2: 32,
       h3: 24,
-      small: 14,
+      s: 14,
+      xs: 12,
     },
     weights: {
       light: 300,

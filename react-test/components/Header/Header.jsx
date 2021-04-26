@@ -9,16 +9,17 @@ const Header = () => {
   const [searchInput, setSearchInput] = useState('');
   const {searchResults, setSearchResults} = useContext(SearchContext);
 
+  const handleLogoClick = () => setSearchResults([]);
 
   const handleInputChange = (e) => {
     setSearchInput(e.target.value);
     const inputValue = searchInputRef.current.value;
     if(inputValue.length >= 3) {
-      const API_KEY = '276903768153e6bb93a7711470e97109';
-      const HASH = 'b377f9b70336abc5319f057b032fb63e';
-      const URL = `https://gateway.marvel.com/v1/public/characters?ts=1&apikey=${API_KEY}&hash=${HASH}`;
+      const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+      const HASH = process.env.NEXT_PUBLIC_HASH;
+      const URL = `${process.env.NEXT_PUBLIC_URL}/v1/public/comics?ts=${process.env.NEXT_PUBLIC_TS}&apikey=${API_KEY}&hash=${HASH}`;
       const fetchData = async (endpoint, value = '') => {
-        const request = await fetch(`${endpoint}&nameStartsWith=${value}`);
+        const request = await fetch(`${endpoint}&titleStartsWith=${value}`);
         const response = await request.json();
         setSearchResults(response.data.results);
       }
@@ -29,7 +30,7 @@ const Header = () => {
 
   return (
     <Container>
-      <Image src="/marvel-logo.svg" alt="" width={100} height={36}/>
+      <Image onClick={handleLogoClick} src="/marvel-logo.svg" alt="" width={100} height={36}/>
       <Label>
         <IconWrapper>
           <FaSearch/>

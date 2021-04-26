@@ -8,4 +8,5 @@ export const List = styled.ul`
   list-style: none;
   margin: 0;
   padding: 1rem 0;
+  overflow-x: scroll;
 `;
