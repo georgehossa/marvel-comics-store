@@ -31,7 +31,7 @@ const CharacterFilterButton = ({ character }) => {
       setCharacterData(null)
       setCharacterComics('')
     };
-  }, [])
+  }, []);
 
   const handleClick = (e) => {
       const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
@@ -49,7 +49,7 @@ const CharacterFilterButton = ({ character }) => {
         }
       };
       getComics();
-  }
+  };
 
   return(
     <>
@@ -58,7 +58,7 @@ const CharacterFilterButton = ({ character }) => {
         'Cargando' :
         <ListItem>
         <ImageWrapper>
-        <Image onClick={(e) => handleClick(e)} data-name={characterData?.name} src={`${characterData?.thumbnail?.path}.${characterData?.thumbnail?.extension}`} alt={characterData?.name} />
+        <Image onClick={(e) => handleClick(e)} data-name={characterData?.name} src={`${characterData?.thumbnail?.path.replace('http://','https://')}.${characterData?.thumbnail?.extension}`} alt={characterData?.name} />
         </ImageWrapper>
         <Name>{characterData?.name}</Name>
         </ListItem>
